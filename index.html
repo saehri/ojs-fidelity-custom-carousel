@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Carousel</title>
+    <!-- Slick Carousel CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <style>
+      .carousel-container {
+        width: 80%;
+        margin: auto;
+        position: relative;
+      }
+      .carousel-container img {
+        width: 250px;
+        height: auto;
+      }
+      /* Styling for Next/Prev buttons */
+      .slick-prev,
+      .slick-next {
+        background-color: #fff;
+        padding: 10px;
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+        cursor: pointer;
+      }
+      /* .slick-prev {
+        left: -40px;
+      }
+      .slick-next {
+        right: -40px;
+      } */
+
+      .slick-dots {
+        display: none !important;
+      }
+
+      .slick-prev:before,
+      .slick-next:before {
+        color: #111 !important;
+        line-height: 0 !important;
+        font-size: 28px;
+      }
+
+      .slick-prev {
+        left: -65px;
+      }
+
+      @media screen and (max-width: 900px) {
+        .slick-next,
+        .slick-prev {
+          display: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel-container">
+      <div class="carousel">
+        <div>
+          <img src="./images/google scholar.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/one search.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/garuda.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/road.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/crossref.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/dimensions.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/ebsco.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/copernicus.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/open aire.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/base.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/scilit.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/drji.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/worldcat.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/journal stories.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/esji.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/advanced science index.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/cambridge up.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/brighton university.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/uni west aus.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/king abdullah univ.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/scimatic.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/lens org.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/imperial college london.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/orcid.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery and Slick Carousel JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.carousel').slick({
+          autoplay: true, // Enable autoplay
+          autoplaySpeed: 2000, // 2 seconds per slide
+          dots: true, // Enable dots (optional)
+          infinite: true, // Infinite looping
+          slidesToShow: 3, // Default number of slides to show
+          slidesToScroll: 1, // Scroll one slide at a time
+          prevArrow: '<button class="slick-prev">&lt;</button>', // Custom previous button
+          nextArrow: '<button class="slick-next">&gt;</button>', // Custom next button
+          responsive: [
+            {
+              breakpoint: 768, // For tablets or smaller
+              settings: {
+                slidesToShow: 2, // Show 2 slides
+                slidesToScroll: 1,
+              },
+            },
+            {
+              breakpoint: 480, // For mobile devices
+              settings: {
+                slidesToShow: 1, // Show 1 slide
+                slidesToScroll: 1,
+              },
+            },
+          ],
+        });
+      });
+    </script>
+  </body>
+</html>
